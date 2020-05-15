@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_ad_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10.5dp"
+            android:layout_marginBottom="130dp"
+            android:background="@drawable/shape_ad_jump"
+            android:gravity="center"
+            android:paddingLeft="18dp"
+            android:paddingTop="9dp"
+            android:paddingRight="18dp"
+            android:paddingBottom="9dp"
+            android:text="跳过"
+            android:textColor="@color/imagepicker_text_white"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+</layout>

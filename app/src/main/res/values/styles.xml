@@ -1,0 +1,10 @@
+<resources>
+    <style name="BaseAppTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+
+        <item name="android:windowBackground">@mipmap/movie_10</item>
+
+    </style>
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+    </style>
+</resources>

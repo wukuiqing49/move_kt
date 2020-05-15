@@ -1,0 +1,84 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        kotlin_version = '1.3.61'
+
+        def versionMajor = 1
+        def versionMinor = 0
+        def versionPatch = 0
+        def versionBuild = 0
+        // module依赖库公共版本号
+        versionCode = versionMajor * 1000 + versionMinor * 100 + versionPatch * 10 + versionBuild
+        versionName = "${versionMajor}.${versionMinor}.${versionPatch}.${versionBuild}"
+
+        compileSdkVersion = 29
+        buildToolsVersion = "29.0.2"
+        minSdkVersion = 19
+        targetSdkVersion = 29
+
+        compatX='1.1.0'
+        recyclerviewX='1.1.0'
+        core_ktx='1.0.2'
+        //retrofit2
+        retrofit = '2.3.0'
+        converterGson = '2.3.0'
+        adapterRxjava2 = '2.3.0'
+
+        //okhttp3
+        okhttp = '3.8.1'
+        loggingInterceptor = '3.8.1'
+
+        //GSON
+        gson = '2.8.2'
+
+
+
+
+        //阿里路由框架
+        arouterApiVersion = '1.4.0'
+        arouterCompilerVersion = '1.2.1'
+
+        //rxJava
+        rxJava = "2.1.8"
+        rxAndroid = "2.0.1"
+
+        //glide
+        glide = '4.5.0'
+        glideTransformations = '3.0.1'
+        compiler = '4.5.0'
+
+        //SmartRefresh
+        SmartRefreshLayout = '1.1.0-alpha-1'
+        SmartRefreshHeader = '1.1.0-alpha-1'
+    }
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
