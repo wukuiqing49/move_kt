@@ -25,4 +25,14 @@ class LaunchActivity : MvpBindingActivity<LaunchView, LaunchPresenter, ActivityL
         super.onCreate(savedInstanceState)
         if (mvpView !=null)mvpView.initView()
     }
+
+    override fun onResume() {
+        super.onResume()
+        if (getPresenter()!=null)getPresenter().resume()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (getPresenter()!=null)getPresenter().stop()
+    }
 }

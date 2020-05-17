@@ -1,4 +1,4 @@
-package com.wkq.move
+package com.wkq.move.module.main.ui.adapter
 
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView

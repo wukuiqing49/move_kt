@@ -2,4 +2,7 @@
     package="com.wkq.lib_base" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application>
+        <activity android:name=".ui.FinishAllActivity"/>
+    </application>
 </manifest>

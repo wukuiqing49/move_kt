@@ -1,7 +1,6 @@
 package com.wkq.lib_base.adapter
 
 import android.content.Context
-import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
@@ -43,13 +42,26 @@ abstract class KtBaseRvAdapter<T> : RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     fun addItem(t: T) {
-        this.itemList?.add(t)
+
+        addItem(this.itemList!!.size, t)
+    }
+
+    open fun addItem(index: Int, item: T?) {
+        if (item != null) {
+            this.itemList?.add(index, item)
+            try {
+                notifyItemInserted(index)
+            } catch (var4: Exception) {
+            }
+        }
     }
 
     fun addItems(items: MutableList<T>?) {
         if (items != null) {
             this.itemList?.addAll(items.asIterable())
+            notifyDataSetChanged()
         }
+
     }
 
     fun removeItem(item: T) {

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.WindowManager
 import com.wkq.base.frame.mosby.delegate.MvpView
 import com.wkq.lib_base.utlis.StatusBarUtil
-import com.wkq.move.MainActivity
+import com.wkq.move.module.main.ui.MainActivity
 import com.wkq.move.module.launch.ui.LaunchActivity
 
 /**
@@ -52,7 +52,7 @@ class LaunchView : MvpView {
     fun finishTimer() {
 
         var intent :Intent =Intent();
-        intent.setClass(mContext,MainActivity().javaClass)
+        intent.setClass(mContext, MainActivity().javaClass)
         mContext.startActivity(intent)
 
     }

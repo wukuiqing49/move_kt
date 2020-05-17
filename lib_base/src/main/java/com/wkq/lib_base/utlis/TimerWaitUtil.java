@@ -13,7 +13,7 @@ public class TimerWaitUtil {
     private long systemAddTotalTime;
     private static final int TIME = 1;
     private TimeListener listener;
-    private long curReminTime;
+    private long curReminTime = 3000;
     private boolean isPause = false;
     private MyHandler mHandler = new MyHandler(this);
 
@@ -26,6 +26,7 @@ public class TimerWaitUtil {
 
     public void setTotalTime(long totalTime) {
         this.totalTime = totalTime;
+        curReminTime = totalTime;
     }
 
     public long getIntervalTime() {
